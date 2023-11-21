@@ -10,6 +10,12 @@
   setopt interactive_comments
   #zle_highlight=('paste:none')
 
+## Add notifications for terminal
+
+  notify(){
+    osascript -e 'display notification "Job Done!" with title "Terminal" sound name "Ding"'
+  }
+
 # Completions
 
 ## zsh-completions
