@@ -1,5 +1,3 @@
-#!/bin/sh
-
 ## Enable Starship prompt
  
  eval "$(starship init zsh)"
@@ -12,8 +10,13 @@
 
 ## Add notifications for terminal
 
-  notify(){
-    osascript -e 'display notification "Job Done!" with title "Terminal" sound name "Ding"'
+  notify() {
+    if [[ $? -eq 0 ]]
+    then
+      osascript -e 'display notification "Job Done!" with title "Terminal" sound name "Blow"'
+    else
+      osascript -e 'display notification "Something wrong!" with title "Terminal" sound name "Blow"'
+    fi
   }
 
 # Completions
