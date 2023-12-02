@@ -2,6 +2,10 @@
  
  eval "$(starship init zsh)"
 
+## Enable navi wodget
+
+ eval "$(navi widget zsh)"
+
 ## Some useful options (man zshoptions)
   
   setopt autocd extendedglob nomatch menucomplete
