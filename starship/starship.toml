@@ -10,6 +10,7 @@ show_always = true
 style = 'purple bold'
 ssh_only = false
 ssh_symbol = ' '
+trim_at = ''
 
 [directory]
 style = 'cyan italic bold'

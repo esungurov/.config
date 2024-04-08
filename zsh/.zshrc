@@ -2,7 +2,7 @@
  
  eval "$(starship init zsh)"
 
-## Enable navi wodget
+## Enable navi widget
 
  eval "$(navi widget zsh)"
 
@@ -75,11 +75,12 @@
 
 ## Get top process eating memory
   
-  alias psmem='ps -auroot | sort -nr -k 4 | head -5'
+  alias psmem='ps -axmo pid,user,pcpu,pmem,comm | head -6'
 
 ## Get top process eating cpu
   
-  alias pscpu='ps -auroot | sort -nr -k 3 | head -5'
+  #alias pscpu='ps -au root | sort -nr -k 3 | head -5'
+  alias pscpi='ps -axro pid,user,pcpu,pmem,comm | head -6'
 
 ## ls
   
